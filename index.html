@@ -14,7 +14,8 @@
   <div id="app">加载文档中...</div>
   <script>
     window.$docsify = {
-        name: 'nuoxian\'s API帮助文档',  // 网站首页昵称
+        name: 'nuoxian\'s API 使用文档',  // 网站首页昵称
+        basePath: '/doc/',
         
         /* 代码复制 */
         copyCode: {
@@ -31,8 +32,7 @@
         loadSidebar: true, // 加载自定义侧边栏 _sidebar 文件
         loadSidebar: '_sidebar.md',
         notFoundPage: true,
-        notFoundPage: '_404.md',
-        
+        notFoundPage: '_404.md'
     }
   </script>
 
@@ -46,8 +46,14 @@
   <script src="//lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism/1.27.0/components/prism-python.min.js"></script>
 
   <!-- 复制剪贴板 -->
-  <script src="//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/docsify-copy-code/2.1.1/docsify-copy-code.min.js"></script>
+  <script src="//cdn.bootcdn.net/ajax/libs/docsify-copy-code/3.0.0/docsify-copy-code.min.js"></script>
   <!--<script src="//unpkg.com/docsify-copy-code"></script>-->
+  
+  <!-- 图片放大 -->
+  <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.13.1/plugins/zoom-image.min.js"></script>
+  
+  <!-- Tab选项卡 -->
+  <script src="assets/js/docsify-tabs.min.js"></script>
   
   <!-- 开始加载运行时间 -->
   <script type="text/javascript">
