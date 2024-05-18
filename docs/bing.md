@@ -1,8 +1,8 @@
-## 接口描述
+# 接口描述
 
 > 获取必应每日壁纸
 
-## 接口地址
+# 接口地址
 
 请求方式：`GET`
 
@@ -12,13 +12,13 @@
 https://api.nxvav.cn/api/bing/
 ```
 
-## 请求示例
+# 请求示例
 
 [https://api.nxvav.cn/api/bing/?encode=json](https://api.nxvav.cn/api/bing/?encode=json)
 
 [https://api.nxvav.cn/api/bing/](https://api.nxvav.cn/api/bing/)
 
-#### 使用场景
+# 使用场景
 
 <!-- tabs:start -->
 
@@ -30,13 +30,13 @@ https://api.nxvav.cn/api/bing/
 
 <!-- tabs:end -->
 
-## 请求参数
+# 请求参数
 
 | 参数名 | 类型 | 示例 | 说明 |
 | ----- | ---- | ---- | ---- |
 | encode | 可空 | json | 输出格式,默认直链 |
 
-## 返回参数
+# 返回参数
 
 | 返回参数 | 说明 |
 | ------- | ---- |
@@ -48,13 +48,13 @@ https://api.nxvav.cn/api/bing/
 | url | 壁纸直链 |
 | copyright | 壁纸版权 |
 
-## 状态代码
+# 状态代码
 
 | 返回状态 | 说明 |
 | ------- | ----- |
 | 200 | 正常 |
 
-## 返回示例
+# 返回示例
 
 ```json
 {
