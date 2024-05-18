@@ -1,8 +1,8 @@
-## 接口描述
+# 接口描述
 
 > 获取蓝奏网盘的直链下载地址
 
-## 接口地址
+# 接口地址
 
 请求方式：`GET`
 
@@ -12,7 +12,7 @@
 https://api.nxvav.cn/api/lanzou/
 ```
 
-## 请求示例
+# 请求示例
 
 [https://api.nxvav.cn/api/lanzou/?url=https://wwi.lanzoui.com/i1nm7fp8z0d](https://api.nxvav.cn/api/lanzou/?url=https://wwi.lanzoui.com/i1nm7fp8z0d)
 
@@ -20,7 +20,7 @@ https://api.nxvav.cn/api/lanzou/
 
 [https://api.nxvav.cn/api/lanzou/?url=https://wwi.lanzoui.com/i1nm7fp8z0d&type=down](https://api.nxvav.cn/api/lanzou/?url=https://wwi.lanzoui.com/i1nm7fp8z0d&type=down)
 
-#### 使用场景
+# 使用场景
 
 <!-- tabs:start -->
 
@@ -32,7 +32,7 @@ https://api.nxvav.cn/api/lanzou/
 
 <!-- tabs:end -->
 
-## 请求参数
+# 请求参数
 
 | 参数名 | 类型 | 示例 | 说明 |
 | ----- | ---- | ---- | ---- |
@@ -47,7 +47,7 @@ https://api.nxvav.cn/api/lanzou/
 | type |  参数二(可空) | 下载类型 | 下载类型 |
 | down | 可空 | 直接下载文件 |  直接下载文件 |
 
-## 返回参数
+# 返回参数
 
 | 返回参数 | 说明 |
 | ------- | ---- |
@@ -59,7 +59,7 @@ https://api.nxvav.cn/api/lanzou/
 | size | 文件大小 |
 | url | 文件直链 |
 
-## 状态代码
+# 状态代码
 
 | 返回状态 | 说明 |
 | ------- | ---- |
@@ -67,7 +67,7 @@ https://api.nxvav.cn/api/lanzou/
 | 201 | 链接错误 |
 | 202 | 密码错误/密码为空 |
 
-## 返回示例
+# 返回示例
 
 ```json
 {
