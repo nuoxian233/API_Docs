@@ -1,8 +1,8 @@
-## 接口描述
+# 接口描述
 
 > 查询网站的权重
 
-## 接口地址
+# 接口地址
 
 请求方式：`GET`
 
@@ -12,13 +12,13 @@
 https://api.nxvav.cn/api/web/
 ```
 
-## 请求示例
+# 请求示例
 
 [https://api.nxvav.cn/api/web/?url=baidu.com](https://api.nxvav.cn/api/web/?url=baidu.com)
 
 [https://api.nxvav.cn/api/web/?url=baidu.com&type=json](https://api.nxvav.cn/api/web/?url=baidu.com&type=json)
 
-#### 使用场景
+# 使用场景
 
 <!-- tabs:start -->
 
@@ -30,7 +30,7 @@ https://api.nxvav.cn/api/web/
 
 <!-- tabs:end -->
 
-## 请求参数
+# 请求参数
 
 | 参数名 | 类型 | 示例 | 说明 |
 | ------ | ----- | ---- | --- |
@@ -45,7 +45,7 @@ https://api.nxvav.cn/api/web/
 | sougou | 可空 | &type=sougou | 输出搜狗权重的图片 |
 | google | 可空 | &type=google | 输出谷歌权重的图片 |
 
-## 返回参数
+# 返回参数
 
 | 返回参数 | 说明 |
 | ------ | ---- |
@@ -56,13 +56,13 @@ https://api.nxvav.cn/api/web/
 | sougou | 搜狗的权重 |
 | google | 谷歌的权重 |
 
-## 状态代码
+# 状态代码
 
 | 返回状态 | 说明 |
 | ------- | ---- |
 | 200 | 返回正常 |
 
-## 返回示例
+# 返回示例
 
 ```json
 {

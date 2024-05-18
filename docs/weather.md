@@ -1,8 +1,8 @@
-## 接口描述
+# 接口描述
 
 > 可以查询各个城市的天气状况，仅限国内
 
-## 接口地址
+# 接口地址
 
 请求方式：`GET`
 
@@ -12,7 +12,7 @@
 https://api.nxvav.cn/api/weather/
 ```
 
-## 请求示例
+# 请求示例
 
 [https://api.nxvav.cn/api/weather/?city=北京](https://api.nxvav.cn/api/weather/?city=北京)
 
@@ -20,7 +20,7 @@ https://api.nxvav.cn/api/weather/
 
 [https://api.nxvav.cn/api/weather/?city=深圳](https://api.nxvav.cn/api/weather/?city=深圳)
 
-#### 使用场景
+# 使用场景
 
 <!-- tabs:start -->
 
@@ -32,13 +32,13 @@ https://api.nxvav.cn/api/weather/
 
 <!-- tabs:end -->
 
-## 请求参数
+# 请求参数
 
 | 参数名 | 类型 | 示例 | 说明 |
 | ------ | ---- | ---- | ---- |
 | city | 必填 | 城市名字 | 城市名字，可使用拼音 |
 
-## 返回参数
+# 返回参数
 
 | 返回参数 | 说明 |
 | ------ | ----- |
@@ -50,13 +50,13 @@ https://api.nxvav.cn/api/weather/
 | code | 天气现象代码 |
 | temperature | 温度，单位为c摄氏度 |
 
-## 状态代码
+# 状态代码
 
 | 返回状态 | 说明 |
 | -------- | ---- |
 | code | 状态码 |
 
-## 返回示例
+# 返回示例
 
 ```json
 {

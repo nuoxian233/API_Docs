@@ -1,8 +1,8 @@
-## 接口描述
+# 接口描述
 
 > 音乐解析，可解析QQ音乐、网易云音乐
 
-## 接口地址
+# 接口地址
 
 请求方式：`GET`
 
@@ -12,7 +12,7 @@
 https://api.nxvav.cn/api/music/
 ```
 
-## 请求示例
+# 请求示例
 
 [https://api.nxvav.cn/api/music/?type=url&id=1436502055](https://api.nxvav.cn/api/music/?type=url&id=1436502055)
 
@@ -20,7 +20,7 @@ https://api.nxvav.cn/api/music/
 
 [https://api.nxvav.cn/api/music/?type=playlist&id=5420609323](https://api.nxvav.cn/api/music/?type=playlist&id=5420609323)
 
-#### 使用场景
+# 使用场景
 
 <!-- tabs:start -->
 
@@ -34,7 +34,7 @@ https://api.nxvav.cn/api/music/
 
 <!-- tabs:end -->
 
-## 请求参数
+# 请求参数
 
 | 参数名 | 类型 | 示例 | 说明 |
 | ----- | ---- | ---- | ---- |
@@ -57,19 +57,19 @@ https://api.nxvav.cn/api/music/
 | single | 可空 | 歌曲信息 | 输出歌曲信息 |
 | playlist | 可空 | 歌单信息 | 输出歌单信息 |
 
-## 返回参数
+# 返回参数
 
 | 返回参数 | 说明 |
 | ------- | ---- |
 | 无 | 无 |
 
-## 状态代码
+# 状态代码
 
 | 返回状态 | 说明 |
 | ------- | ---- |
 | 无 | 无 |
 
-## 返回示例
+# 返回示例
 
 <audio controls="controls" height="100" width="100">
     <source src="https://api.nxvav.cn/api/music/?type=url&id=1436502055" type="audio/mpeg">
