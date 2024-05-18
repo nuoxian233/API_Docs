@@ -1,8 +1,8 @@
-## Minecraft正版用户UUID获取
+# Minecraft正版用户UUID获取
 
 > Minecraft正版用户UUID获取
 
-## 接口地址
+# 接口地址
 
 请求方式：`GET`
 
@@ -12,11 +12,11 @@
 https://api.nxvav.cn/api/mc/
 ```
 
-## 请求示例
+# 请求示例
 
 [https://api.nxvav.cn/api/mc/?id=nuoxian](https://api.nxvav.cn/api/mc/?id=nuoxian)
 
-#### 使用场景
+# 使用场景
 
 <!-- tabs:start -->
 
@@ -59,13 +59,13 @@ echo $data -> uuid;
 
 <!-- tabs:end -->
 
-## 请求参数
+# 请求参数
 
 | 参数名 | 类型 | 示例 | 说明 |
 | ------ | ---- | ---- | ---- |
 | id | 必填 | ?id=123 | 正版MC用户名 |
 
-## 返回参数
+# 返回参数
 
 | 返回参数 | 说明 |
 | -------- | ---- |
@@ -73,14 +73,14 @@ echo $data -> uuid;
 | name | 玩家昵称 |
 | uuid | 玩家UUID |
 
-## 状态代码
+# 状态代码
 
 | 返回状态 | 说明 |
 | -------- | ---- |
 | 200 | 正常 |
 | 201 | 查询错误 / 参数为空 |
 
-## 返回示例
+# 返回示例
 
 ```json
 {
