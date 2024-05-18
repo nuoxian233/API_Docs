@@ -1,8 +1,8 @@
-## Minecraft正版皮肤披风获取
+# Minecraft正版皮肤披风获取
 
 > Minecraft正版皮肤披风获取
 
-## 接口地址
+# 接口地址
 
 请求方式：`GET`
 
@@ -12,7 +12,7 @@
 https://api.nxvav.cn/api/mcskin/
 ```
 
-## 请求示例
+# 请求示例
 
 [https://api.nxvav.cn/api/mcskin/?id=nuoxian](https://api.nxvav.cn/api/mcskin/?id=nuoxian)
 
@@ -22,7 +22,7 @@ https://api.nxvav.cn/api/mcskin/
 
 [https://api.nxvav.cn/api/mcskin/?uuid=5f820c3958834392b1743125ac05e38c&type=skin_cloak](https://api.nxvav.cn/api/mcskin/?uuid=5f820c3958834392b1743125ac05e38c&type=skin_cloak)
 
-#### 使用场景
+# 使用场景
 
 <!-- tabs:start -->
 
@@ -34,14 +34,14 @@ https://api.nxvav.cn/api/mcskin/
 
 <!-- tabs:end -->
 
-## 请求参数
+# 请求参数
 
 | 参数名 | 类型 | 示例 | 说明 |
 | ------ | ---- | ---- | ---- |
 | id / uuid | 必填 | ?id=[用户名] / ?uuid=[uuid] | 正版MC用户名 / 正版MC玩家的UUID，优先级id > uuid |
 |  type | 可空 | skin_url / skin_cloak | 输出皮肤 / 披风 |
 
-## 返回参数
+# 返回参数
 
 | 返回参数 | 说明 |
 | -------- | ---- |
@@ -55,14 +55,14 @@ https://api.nxvav.cn/api/mcskin/
 | skin_cloak | 玩家披风，没有或没装备为null |
 | skin_model | 玩家皮肤模型，null为男，slim为女 |
 
-## 状态代码
+# 状态代码
 
 | 返回状态 | 说明 |
 | -------- | ---- |
 | 200 | 正常 |
 | 201 | 查询错误 / 参数为空 |
 
-## 返回示例
+# 返回示例
 
 ```json
 {
