@@ -1,5 +1,5 @@
 * 开始使用
-  * [关于本站](/  "关于本站 | nuoxian's API 使用文档")
+  * [关于本站](/  "nuoxian's API 使用文档")
   * [快速开始](docs/help.md  "快速开始 | nuoxian's API 使用文档")
   * [服务条款](https://api.nxvav.cn/tos.html)
 
