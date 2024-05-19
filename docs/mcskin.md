@@ -1,7 +1,3 @@
-# Minecraft正版皮肤披风获取
-
-> Minecraft正版皮肤披风获取
-
 # 接口地址
 
 请求方式：`GET`

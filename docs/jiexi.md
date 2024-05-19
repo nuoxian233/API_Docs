@@ -1,16 +1,3 @@
-# 接口描述
-
-> 支持解析以下视频
-
-| 视频平台 | 视频平台 | 视频平台 |
-| ------- | ------- | ------- |
-| 抖音 | 皮皮虾 | 火山 |
-| 微视 | 微博 | 绿洲 |
-| 最右 | 轻视频 | 快手 |
-| 全民小视频 | 皮皮搞笑 | 巴塞电影 |
-| 陌陌 | Before避风 | 开眼 |
-| Vue Vlog | 小咖秀 | 全民K歌 |
-
 # 接口地址
 
 请求方式：`GET`
@@ -26,6 +13,17 @@ https://api.nxvav.cn/api/jiexi/
 [https://api.nxvav.cn/api/jiexi/?url=https://v.douyin.com/e28ypsB/](https://api.nxvav.cn/api/jiexi/?url=https://v.douyin.com/e28ypsB/)
 
 [https://api.nxvav.cn/api/jiexi/?url=https://v.kuaishou.com/beDrMO/](https://api.nxvav.cn/api/jiexi/?url=https://v.kuaishou.com/beDrMO/)
+
+> 支持解析以下视频
+
+| 视频平台 | 视频平台 | 视频平台 |
+| ------- | ------- | ------- |
+| 抖音 | 皮皮虾 | 火山 |
+| 微视 | 微博 | 绿洲 |
+| 最右 | 轻视频 | 快手 |
+| 全民小视频 | 皮皮搞笑 | 巴塞电影 |
+| 陌陌 | Before避风 | 开眼 |
+| Vue Vlog | 小咖秀 | 全民K歌 |
 
 # 使用场景
 

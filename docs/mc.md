@@ -1,7 +1,3 @@
-# Minecraft正版用户UUID获取
-
-> Minecraft正版用户UUID获取
-
 # 接口地址
 
 请求方式：`GET`
