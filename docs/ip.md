@@ -8,6 +8,8 @@
 https://api.nxvav.cn/api/ip/
 ```
 
+IP地址位置数据由 <a href="https://www.cz88.net" target="_blank">纯真CZ88</a> 提供支持
+
 # 请求示例
 
 [https://api.nxvav.cn/api/ip/](https://api.nxvav.cn/api/ip/)
@@ -30,7 +32,7 @@ https://api.nxvav.cn/api/ip/
 header('Access-Control-Allow-Origin:*');
 header('content-type:application/json');
 // API接口
-$url  = 'https://api.nxvav.cn/ip/';
+$url  = 'https://api.nxvav.cn/api/ip/';
 
 // 设置URL和相应的选项
 $curl = curl_init();
