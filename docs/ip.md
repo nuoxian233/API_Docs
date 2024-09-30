@@ -14,6 +14,10 @@ IP地址位置数据由 <a href="https://www.cz88.net" target="_blank">纯真CZ8
 
 [https://api.nxvav.cn/api/ip/](https://api.nxvav.cn/api/ip/)
 
+[https://api.nxvav.cn/api/ip/?ip=114.114.114.114](https://api.nxvav.cn/api/ip/?ip=114.114.114.114)
+
+[https://api.nxvav.cn/api/ip/?ip=114.114.114.114&format=text](https://api.nxvav.cn/api/ip/?ip=114.114.114.114&format=text)
+
 ## 使用场景
 
 <!-- tabs:start -->
