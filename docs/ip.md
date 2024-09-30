@@ -1,8 +1,8 @@
-# 接口地址
+## 接口地址
 
 请求方式：`GET`
 
-返回格式：`JSON` / `XML`
+返回格式：`JSON` / `XML` / `JS` / `JSONP` / `TEXT`
 
 ```API
 https://api.nxvav.cn/api/ip/
@@ -10,11 +10,11 @@ https://api.nxvav.cn/api/ip/
 
 IP地址位置数据由 <a href="https://www.cz88.net" target="_blank">纯真CZ88</a> 提供支持
 
-# 请求示例
+## 请求示例
 
 [https://api.nxvav.cn/api/ip/](https://api.nxvav.cn/api/ip/)
 
-# 使用场景
+## 使用场景
 
 <!-- tabs:start -->
 
@@ -53,47 +53,44 @@ echo $data -> code;
 
 <!-- tabs:end -->
 
-# 请求参数
+## 请求参数
 
 | 参数名 | 类型 | 示例 | 说明 |
 | ------ | ---- | ---- | ---- |
-|  |  |  |  |
+| ip | 可空 |  |  |
+| format | 可空 |  |  |
 
-# 返回参数
+## 返回参数
 
 | 返回参数 | 说明 |
 | -------- | ---- |
 | code | 状态码 |
-| ip | 查询的ip |
-| ip_start | 查询的起始ip |
-| ip_end | 查询的结束ip |
-| address | ip地址 |
-| location | ip运营商 |
-| country | 查询的ip国家 |
-| province | 查询的省 |
-| city | 查询的城市 |
-| area | 查询的地区 |
+| ip | ip地址 |
+| country | 国家 |
+| province | 省份 |
+| city | 城市 |
+| district | 地区 |
+| provider | 运营商
 
-# 状态代码
+## 状态代码
 
 | 返回状态 | 说明 |
 | -------- | ---- |
 | 200 | 正常 |
 | 201 | 查询错误 / 参数为空 |
 
-# 返回示例
+## 返回示例
 
 ```json
 {
     "code": 200,
-    "ip": "123.4.4.4",
-    "ip_start": "123.4.0.0",
-    "ip_end": "123.4.10.255",
-    "address": "河南省濮阳市",
-    "location": "联通",
-    "country": "中国",
-    "province": "河南省",
-    "city": "濮阳市",
-    "area": ""
+    "data": {
+        "ip": "114.114.114.114",
+        "country": "中国",
+        "province": "江苏",
+        "city": "南京",
+        "district": null,
+        "provider": "南京信风网络科技有限公司GreatbitDNS服务器"
+    }
 }
 ```
