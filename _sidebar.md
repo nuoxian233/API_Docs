@@ -8,7 +8,7 @@
   * [生成二维码](docs/qr.md  "生成二维码 | nuoxian's API 使用文档")
   * [m3u8视频播放器](docs/m3u8.md  "m3u8视频播放器 | nuoxian's API 使用文档")
   * [必应每日美图](docs/bing.md  "必应每日美图 | nuoxian's API 使用文档")
-  * [随机动漫图](docs/dongman.md  "随即动漫图 | nuoxian's API 使用文档")
+  * [随机动漫图](docs/dongman.md  "随机动漫图 | nuoxian's API 使用文档")
   * [音乐解析](docs/music.md  "音乐解析 | nuoxian's API 使用文档")
   * [热门视频解析](docs/jiexi.md  "热门视频解析 | nuoxian's API 使用文档")
   * [收录查询](docs/site.md  "收录查询 | nuoxian's API 使用文档")
