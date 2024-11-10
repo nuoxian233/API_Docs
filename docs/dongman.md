@@ -2,7 +2,7 @@
 
 请求方式：`GET`
 
-返回格式：`JPG` / `JSON`
+返回格式：`JPG` / `JSON` / `JS` / `TEXT`
 
 ```API
 https://api.nxvav.cn/api/dongman/
@@ -12,11 +12,11 @@ https://api.nxvav.cn/api/dongman/
 
 [https://api.nxvav.cn/api/dongman/](https://api.nxvav.cn/api/dongman/)
 
-[https://api.nxvav.cn/api/dongman/?type=m](https://api.nxvav.cn/api/dongman/?type=m)
+[https://api.nxvav.cn/api/dongman/?encode=json](https://api.nxvav.cn/api/dongman/?encode=json)
 
-[https://api.nxvav.cn/api/dongman/?type=pc](https://api.nxvav.cn/api/dongman/?type=pc)
+[https://api.nxvav.cn/api/dongman/?encode=js](https://api.nxvav.cn/api/dongman/?encode=js)
 
-[https://api.nxvav.cn/api/dongman/?type=pc](https://api.nxvav.cn/api/dongman/?encode=json)
+[https://api.nxvav.cn/api/dongman/?encode=text](https://api.nxvav.cn/api/dongman/?encode=text)
 
 # 使用场景
 
@@ -34,8 +34,7 @@ https://api.nxvav.cn/api/dongman/
 
 | 参数名 | 类型 | 示例 | 说明 |
 | ------ | ---- | ---- | ---- |
-| type | 可空 | pc m | 根据设备尺寸自动切换 |
-| encode | 可空 | json | 返回json格式 |
+| encode | 可空 | json、js、text | 返回json、js、text格式 |
 
 # 返回参数
 
@@ -51,6 +50,9 @@ https://api.nxvav.cn/api/dongman/
 
 # 返回示例
 
-```html
-无
+```json
+{
+    "code": 200,
+    "imgurl": "https://cdn.cdnjson.com/pic.html?url=https://tva3.sinaimg.cn/large/a15b4afegy1fmvj54szzxj21hc0u01ku"
+}
 ```
