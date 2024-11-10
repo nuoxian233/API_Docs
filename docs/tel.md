@@ -53,13 +53,15 @@ echo $data -> tel;
 // 输出归属地
 echo $data -> local;
 // 输出号码段
-echo $data -> duan;
+echo $data -> numberRange;
 // 输出卡类型
-echo $data -> type;
+echo $data -> cardType;
 // 输出运营商
-echo $data -> yys;
+echo $data -> operator;
+// 输出内置卡
+echo $data -> internalSimCard;
 // 输出通讯标准
-echo $data -> bz;
+echo $data -> gsmStandard;
 ?>
 ```
 
@@ -78,10 +80,11 @@ echo $data -> bz;
 | code | 状态码 |
 | tel | 手机号码 |
 | local | 归属地 |
-| duan | 号码段 |
-| type | 卡类型 |
-| yys | 运营商 |
-| bz | 通信标准 |
+| numberRange | 号码段 |
+| cardType | 卡类型 |
+| operator | 运营商 |
+| internalSimCard | 内置卡 |
+| gsmStandard | 通信标准 |
 
 # 状态代码
 
@@ -94,12 +97,13 @@ echo $data -> bz;
 
 ```json
 {
-	"code": "200",
-	"tel": "18888888888",
-	"local": "归属地：北京市",
-	"duan": "号码段：1888888",
-	"type": "卡类型：北京移动TD-SCDMA卡 (3G)",
-	"yys": "运营商：中国移动",
-	"bz": "通信标准：TD-SCDMA (时分同步码分多址)"
+    "code": 200,
+    "tel": "18888888888",
+    "local": "北京市",
+    "numberRange": "1888888",
+    "cardType": "北京移动TD-SCDMA卡 (3G)",
+    "operator": "中国移动",
+    "internalSimCard": "USIM手机卡",
+    "gsmStandard": "TD-SCDMA (时分同步码分多址)"
 }
 ```
