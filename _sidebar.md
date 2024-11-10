@@ -18,7 +18,6 @@
   * [城市天气预报获取](docs/weather.md  "城市天气预报获取 | nuoxian's API 使用文档")
   * [网站标题获取](docs/title.md  "网站标题获取 | nuoxian's API 使用文档")
   * [手机号归属地查询](docs/tel.md  "手机号归属地查询 | nuoxian's API 使用文档")
-  * [QQ在线状态查询](docs/qqzx.md  "QQ在线状态查询 | nuoxian's API 使用文档")
   * [网站ico图标获取](docs/wzico.md  "网站ico图标获取 | nuoxian's API 使用文档")
   * [蓝奏网盘直链解析](docs/lanzou.md  "蓝奏网盘直链解析 | nuoxian's API 使用文档")
   * [历史上的今天](docs/lishi.md  "历史上的今天 | nuoxian's API 使用文档")
