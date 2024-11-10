@@ -30,7 +30,7 @@ API大多数是为了网站开发者、程序开发者的使用。当然普通�
 | ------ | ---- | ---- | ---- |
 | url | 必填 | 不能带中文字、特殊符号 | 视频平台分享的链接地址 |
 
-`请求参数`的`参数名`下方有个`url`，就是我们所要携带的参数内容了，那么就是（每一个请求接口第一位都需要带上?，例如：xxx.com/?a=1&b=2&c=3 后面的一定要是&来作为附带请求参数）：api.nxvav.cn/api/jiexi/?url=`视频平台分享的链接地址`，那么就是[https://api.nxvav.cn/api/jiexi/?url=https://v.douyin.com/e28ypsB/](https://api.nxvav.cn/api/jiexi/?url=https://v.douyin.com/e28ypsB/)
+`请求参数`的`参数名`下方有个`url`，就是我们所要携带的参数内容了，那么就是（每一个请求接口第一位都需要带上?，例如：xxx.com/?a=1&b=2&c=3 后面的一定要是&来作为附带请求参数）：api.nxvav.cn/api/jiexi/?url=`视频平台分享的链接地址`，那么就是[https://api.nxvav.cn/api/jiexi/?url=https://www.douyin.com/video/6682652170002730251](https://api.nxvav.cn/api/jiexi/?url=https://www.douyin.com/video/6682652170002730251)
 
 然后看到接口文档的`返回参数`，以下是该说明文档的信息：
 
@@ -39,18 +39,17 @@ API大多数是为了网站开发者、程序开发者的使用。当然普通�
 | code | 状态码 |
 | msg | 返回信息 |
 | data | 视频数据 |
-| author | 作者名字 |
-| uid | 作者id |
-| avatar | 作者头像 |
-| like | 视频点赞数量 |
-| time | 发布时间(时间戳) |
-| title | 视频标题 |
-| cover | 视频封面 |
-| url | 视频直链地址 |
-| music | 音乐信息 |
-| author | 音乐作者 |
-| avatar | 音乐封面 |
-| url | 音乐直链地址 |
+| data > author | 作者名字 |
+| data > uid | 作者id |
+| data > avatar | 作者头像 |
+| data > like | 视频点赞数量 |
+| data > time | 发布时间(时间戳) |
+| data > title | 视频标题 |
+| data > cover | 视频封面 |
+| data > url | 视频直链地址 |
+| data > music | 音乐信息 |
+| data > music > author | 音乐作者 |
+| data > music > avatar | 音乐封面 |
 
 访问以上的链接，得到了以下`JSON`格式的信息。为了方便理解，我们特地将下方的json信息加上注释（注释就是对代码的解释和说明。目的是为了让别人和自己很容易看懂，一看就知道这段代码是做什么用的。）
 
@@ -58,21 +57,20 @@ API大多数是为了网站开发者、程序开发者的使用。当然普通�
 // 以下的都是在返回参数中的说明可以了解到的内容
 
 {
-    "code": 200, // 状态码
-    "msg": "解析成功", // 返回信息
-    "data": { // 视频数据
-        "author": "人民日报", // 作者名字
-        "uid": "rmrbxmt", // 作者id
-        "avatar": "https://p6.douyinpic.com/aweme/1080x1080/30ed2000aad26be101cad.jpeg?from=116350172", // 作者头像
-        "like": 4352174, // 视频点赞数量
-        "time": 1555982844, // 发布时间(时间戳)
-        "title": "人民海军生日快乐！重温2009国庆阅兵海军方队的风采。期待今天的海上阅兵！", // 视频标题
-        "cover": "https://p9.douyinpic.com/1f8dd000451fc169d0e77~tplv-dy-360p.jpeg?from=4257465056&s=&se=false&sh=&sc=&l=2021090715471901021215216645015FCB&biz_tag=feed_cover", // 视频封面
-        "url": "http://v3-dy-o.zjcdn.com/774360cc9bf046a9222f6f5d80c90e7f/61372726/video/m/220933054381c144d469dc1d9fcff4e73b61161e3f25000017f6feb628c0/?a=1128&amp;br=2510&amp;bt=2510&amp;btag=3&amp;cd=0%7C0%7C0&amp;ch=0&amp;cr=0&amp;cs=0&amp;cv=1&amp;dr=0&amp;ds=3&amp;er=&amp;ft=dlb~O-eTzzyhWH6Cu7apb&amp;l=2021090715472001021120213401018DA4&amp;lr=&amp;mime_type=video_mp4&amp;net=0&amp;pl=0&amp;qs=0&amp;rc=ajs7cm08anc5bDMzO2kzM0ApaTRnaDZmaDtpNzc0NzM2M2cpaGRqbGRoaGRmXmpqMWNhL2dzXy0tYy0vc3NiNWItNDVjMl5jXzIzNWEvOmNwb2wrbStqdDo%3D&amp;vl=&amp;vr=", // 视频直链地址
-        "music": { // 音乐信息
-            "author": "人民日报", // 音乐作者
-            "avatar": "https://p6.douyinpic.com/aweme/1080x1080/30ed2000aad26be101cad.jpeg?from=116350172", // 音乐封面
-            "url": "https://sf3-cdn-tos.douyinstatic.com/obj/ies-music/1631518807291940.mp3" // 音乐直链地址
+    "code": 200,
+    "msg": "解析成功",
+    "data": {
+        "author": "人民日报",
+        "uid": "rmrbxmt",
+        "avatar": "https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_21b4383e542b8991bcd33d33eeda7d8d.jpeg?from=327834062",
+        "like": 13101165,
+        "time": 1555982844,
+        "title": "人民海军生日快乐！重温2009国庆阅兵海军方队的风采。期待今天的海上阅兵！",
+        "cover": "https://p3-sign.douyinpic.com/179d10014283e5888d5c7~tplv-dy-resize-walign-adapt-aq:720:q75.webp?x-expires=1732446000&x-signature=3tnyVWeOdbqyefiUpAihXIZlm9E%3D&from=327834062&s=PackSourceEnum_DOUYIN_REFLOW&se=false&sc=cover&biz_tag=aweme_video&l=20241110191548C144116C1F8758FD053F",
+        "url": "https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff80000biv6jt2gd9fj4om8m8ag&ratio=720p&line=0",
+        "music": {
+            "author": "人民日报",
+            "avatar": "https://p3.douyinpic.com/aweme/1080x1080/aweme-avatar/tos-cn-avt-0015_21b4383e542b8991bcd33d33eeda7d8d.jpeg?from=327834062"
         }
     }
 }
@@ -85,9 +83,7 @@ API大多数是为了网站开发者、程序开发者的使用。当然普通�
 看到说明文档的倒数第四个，它是music（音乐信息），那么它所有下面的返回参数都是音乐信息相关的。这样我们就知道获取第一个url了，而不是music的url。
 
 ```json
-需要的："url": "http://v3-dy-o.zjcdn.com/774360cc9bf046a9222f6f5d80c90e7f/61372726/video/m/220933054381c144d469dc1d9fcff4e73b61161e3f25000017f6feb628c0/?a=1128&amp;br=2510&amp;bt=2510&amp;btag=3&amp;cd=0%7C0%7C0&amp;ch=0&amp;cr=0&amp;cs=0&amp;cv=1&amp;dr=0&amp;ds=3&amp;er=&amp;ft=dlb~O-eTzzyhWH6Cu7apb&amp;l=2021090715472001021120213401018DA4&amp;lr=&amp;mime_type=video_mp4&amp;net=0&amp;pl=0&amp;qs=0&amp;rc=ajs7cm08anc5bDMzO2kzM0ApaTRnaDZmaDtpNzc0NzM2M2cpaGRqbGRoaGRmXmpqMWNhL2dzXy0tYy0vc3NiNWItNDVjMl5jXzIzNWEvOmNwb2wrbStqdDo%3D&amp;vl=&amp;vr=",
-
-不需要的："url": "https://sf3-cdn-tos.douyinstatic.com/obj/ies-music/1631518807291940.mp3"
+需要的："url": "https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff80000biv6jt2gd9fj4om8m8ag&ratio=720p&line=0",
 ```
 
 # 效果视频
