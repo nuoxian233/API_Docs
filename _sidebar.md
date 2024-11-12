@@ -11,7 +11,6 @@
   * [随机动漫图](docs/dongman.md  "随机动漫图 | nuoxian's API 使用文档")
   * [音乐解析](docs/music.md  "音乐解析 | nuoxian's API 使用文档")
   * [热门视频解析](docs/jiexi.md  "热门视频解析 | nuoxian's API 使用文档")
-  * [收录查询](docs/site.md  "收录查询 | nuoxian's API 使用文档")
   * [哔哩哔哩视频解析](docs/bilivideo.md  "哔哩哔哩视频解析 | nuoxian's API 使用文档")
   * [QQ头像获取](docs/qqimg.md  "QQ头像获取 | nuoxian's API 使用文档")
   * [网站ICP备案查询](docs/icp.md  "网站ICP备案查询 | nuoxian's API 使用文档")
