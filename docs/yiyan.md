@@ -1,70 +1,70 @@
 ## 接口地址
 
-请求方式 `GET`
-
-返回格式 `TEXT` / `JSON`
-
 ```
 https://api.nxvav.cn/api/yiyan/
 ```
 
 ## 请求示例
 
-[https://api.nxvav.cn/api/yiyan/?encode=json&charset=utf-8](https://api.nxvav.cn/api/yiyan/?encode=json&charset=utf-8)
+[https://api.nxvav.cn/api/yiyan/?charset=utf8](https://api.nxvav.cn/api/yiyan/?charset=utf8)
 
 [https://api.nxvav.cn/api/yiyan/?encode=js&charset=gbk](https://api.nxvav.cn/api/yiyan/?encode=js&charset=gbk)
 
-[https://api.nxvav.cn/api/yiyan/?encode=js1&charset=gbk](https://api.nxvav.cn/api/yiyan/?encode=js1&charset=gbk)
-
-[https://api.nxvav.cn/api/yiyan/?encode=text&charset=utf-8](https://api.nxvav.cn/api/yiyan/?encode=text&charset=utf-8)
-
-## 使用场景
-
 <!-- tabs:start -->
 
-#### **HTML**
+#### **Shell**
 
-```json
-<!-- 获取仙言，建议放在<head>内 -->
-<script type="text/javascript" src="https://api.nxvav.cn/api/yiyan/?encode=js1&charset=utf-8"></script>
-<!-- 返回仙言信息 -->
-<script>yiyan()</script>
+```shell
+curl https://api.nxvav.cn/api/yiyan -X POST -d 'charset=utf8'
+```
+
+#### **HTTP**
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+   CURLOPT_URL => 'https://api.nxvav.cn/api/yiyan/?charset=utf8&encode=json',
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => '',
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
 ```
 
 <!-- tabs:end -->
 
 ## 请求参数
 
-| 参数名  | 类型 | 示例      | 说明                  |
-| ------- | ---- | --------- | --------------------- |
-| charset | 参数一(可空) | 输出 gbk / utf-8 | 输出编码，默认为utf-8 |
-| gbk | 可空 | 输出gbk格式，在json下无法显示 | |
-| utf-8 | 可空 | 输出utf-8格式 |  |
-
-| 参数名  | 类型 | 示例      | 说明                  |
-| ------- | ---- | --------- | --------------------- |
-| encode  | 参数二(可空) | 输出 js / json   | 输出的方式，默认json              |
-| js  | 可空 | 输出js   |               |
-| js1  | 可空 | 输出js1,旧样式   |               |
-| json  | 可空 | 输出json   |              |
-| text  | 可空 | 输出纯文本   |              |
+| 参数名 | 类型 | 必填 | 说明 |
+| - | - | - | - |
+| charset | string | 否 | 返回编码格式，可选值`utf8`，`gbk`不填默认返回`utf8` |
+| encode | string | 否 | 返回数据格式，可选值`json`，`js`，`js1`，`text`不填默认返回`json` |
 
 ## 返回参数
 
-| 返回参数 | 说明     |
-| -------- | -------- |
-| id       | 一言标识   |
-| yiyan  | 一言正文。编码方式 unicode。使用 utf-8。 |
-| createTime  | 13位时间戳 |
-| nick  | 发布者 |
-
-## 状态代码
-
-| 返回状态 | 说明 |
-| ------- | ---- |
-| 无      | 无    |
+| 返回参数 | 类型 | 说明 |
+| - | - | - |
+| id | string | 仙言id |
+| yiyan | string | 仙言内容 |
+| createTime | string | 仙言发布时间 |
+| nick | string | 仙言作者 |
 
 ## 返回示例
+
+<!-- tabs:start -->
+
+#### **成功(200)**
 
 ```json
 {
@@ -74,3 +74,14 @@ https://api.nxvav.cn/api/yiyan/
     "nick": "包子再咬两个没关系阿"
 }
 ```
+
+#### **失败(201)**
+
+```json
+{
+    "code": 201,
+    "msg": "无法获取 data 内容"
+}
+```
+
+<!-- tabs:end -->
