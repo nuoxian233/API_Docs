@@ -1,4 +1,4 @@
-![logo](https://api.nxvav.cn/favicon.png)
+![logo](https://api.nxvav.cn/favicon.ico)
 
 # nuoxian's API
 
