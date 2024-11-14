@@ -2,7 +2,7 @@
 
 > 欢迎使用nuoxian's API 公开接口服务！这里将讲解怎样快速开始使用API哦！
 
-# 什么是API?
+## 什么是API?
 
 用知乎上一个比较生动的例子来说明：
 
@@ -10,11 +10,11 @@
 
 怎么样，是不是更好理解了呢？
 
-# 适合群体
+## 适合群体
 
 API大多数是为了网站开发者、程序开发者的使用。当然普通群体也是可以使用的。
 
-# 使用API
+## 使用API
 
 以热门视频解析的API来说明使用。我们需要将抖音平台的一个视频弄成一个无水印视频。抖音视频地址为：v.douyin.com/e28ypsB/，一般抖音APP内下载视频是会在视频里`有水印和结束动画`的，我们的目的是`无水印无结束动画`。
 
@@ -86,7 +86,7 @@ API大多数是为了网站开发者、程序开发者的使用。当然普通�
 需要的："url": "https://aweme.snssdk.com/aweme/v1/play/?video_id=v0200ff80000biv6jt2gd9fj4om8m8ag&ratio=720p&line=0",
 ```
 
-# 效果视频
+## 效果视频
 
 ##### 有水印视频
 
@@ -100,6 +100,6 @@ API大多数是为了网站开发者、程序开发者的使用。当然普通�
     <source src="https://one.nxvav.cn/Video/%E6%97%A0%E6%B0%B4%E5%8D%B0%E8%A7%86%E9%A2%91.mp4" type="video/mp4">
 </video>
 
-# 视频：什么是API?
+## 视频：什么是API?
 
-<iframe src="//player.bilibili.com/player.html?aid=584075248&bvid=BV1v64y1F7XN&cid=220828223&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500px"> </iframe>
+<iframe src="https://api.nxvav.cn/api/bilivideo/?bv=BV1v64y1F7XN&p=1&q=32&otype=dplayer" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500px"> </iframe>

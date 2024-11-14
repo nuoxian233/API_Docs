@@ -16,7 +16,7 @@ E-mail：[nuo_xian@qq.com](mailto:nuo_xian@qq.com)
 
 nuoxian's API黑名单列表：[https://nxvav.cn/apifirewall.html](https://nxvav.cn/apifirewall.html)
 
-# 访问限制
+## 访问限制
 
 因考虑到 nuoxian's API 会被恶意调用等情况，本站决定限制访问来阻止不必要的资源消耗。故做出以下限制，敬请谅解：
 
@@ -25,13 +25,13 @@ nuoxian's API黑名单列表：[https://nxvav.cn/apifirewall.html](https://nxvav
 
 以上被禁止的 IP 和 UA 都可在 nuoxian's API黑名单列表 查看到对应的内容，被禁止的 IP 将返回 403 错误。
 
-# 捐赠我们
+## 捐赠我们
 
 <a href="https://api.nxvav.cn/donate.html" target="_blank">https://api.nxvav.cn/donate.html</a>
 
 <iframe src="../donate.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:320px; width:100%;" frameborder="0" scrolling="no"></iframe>
 
-# 捐赠名单
+## 捐赠名单
 
 <details>
 <summary>捐赠者名单（感谢每一个支持我们的人）</summary>
