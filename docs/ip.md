@@ -69,12 +69,13 @@ echo $data -> code;
 | 返回参数 | 说明 |
 | -------- | ---- |
 | code | 状态码 |
-| ip | ip地址 |
-| country | 国家 |
-| province | 省份 |
-| city | 城市 |
-| district | 地区 |
-| provider | 运营商
+| data > ip | ip地址 |
+| data > ipVersion | ip协议版本 |
+| data > countryName | 国家 |
+| data > regionName | 省份 |
+| data > cityName | 城市 |
+| data > districtName | 地区 |
+| data > internetServiceProvider | 运营商
 
 ## 状态代码
 
@@ -90,11 +91,12 @@ echo $data -> code;
     "code": 200,
     "data": {
         "ip": "114.114.114.114",
-        "country": "中国",
-        "province": "江苏",
-        "city": "南京",
-        "district": null,
-        "provider": "南京信风网络科技有限公司GreatbitDNS服务器"
+        "ipVersion": "ipv4",
+        "countryName": "中国",
+        "regionName": "江苏",
+        "cityName": "南京",
+        "districtName": null,
+        "internetServiceProvider": "南京信风网络科技有限公司GreatbitDNS服务器"
     }
 }
 ```
