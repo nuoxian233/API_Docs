@@ -1,14 +1,10 @@
-# 接口地址
-
-请求方式：`GET`
-
-返回格式：`JPG` / `JSON` / `JS` / `TEXT`
+## 接口地址
 
 ```API
 https://api.nxvav.cn/api/dongman/
 ```
 
-# 请求示例
+## 请求示例
 
 [https://api.nxvav.cn/api/dongman/](https://api.nxvav.cn/api/dongman/)
 
@@ -16,39 +12,59 @@ https://api.nxvav.cn/api/dongman/
 
 [https://api.nxvav.cn/api/dongman/?encode=js](https://api.nxvav.cn/api/dongman/?encode=js)
 
-[https://api.nxvav.cn/api/dongman/?encode=text](https://api.nxvav.cn/api/dongman/?encode=text)
-
-# 使用场景
-
 <!-- tabs:start -->
 
-#### **html**
+#### **Shell**
 
-```html
-<img src="https://api.nxvav.cn/api/dongman/" />
+```shell
+curl https://api.nxvav.cn/api/dongman -X POST -d 'encode=json'
+```
+
+#### **PHP**
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+   CURLOPT_URL => 'https://api.nxvav.cn/api/dongman/?encode=json',
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => '',
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+?>
 ```
 
 <!-- tabs:end -->
 
-# 请求参数
+## 请求参数
 
-| 参数名 | 类型 | 示例 | 说明 |
-| ------ | ---- | ---- | ---- |
-| encode | 可空 | json、js、text | 返回json、js、text格式 |
+| 参数名 | 类型 | 必填 | 说明 |
+| - | - | - | - |
+| encode | string | 否 | 返回数据格式，可选值`json`，`js`，`text`，不填默认返回`image/png` |
 
-# 返回参数
+## 返回参数
 
-| 返回参数 | 说明 |
-| ------- | ---- |
-| 无 | 无 |
+| 返回参数 | 类型 | 说明 |
+| - | - | - |
+| code | string | 状态码 |
+| imgurl | string | 图片链接 |
 
-# 状态代码
+## 返回示例
 
-| 返回状态 | 说明 |
-| ------- | ---- |
-| 无 | 无 |
+<!-- tabs:start -->
 
-# 返回示例
+#### **成功(200)**
 
 ```json
 {
@@ -56,3 +72,14 @@ https://api.nxvav.cn/api/dongman/
     "imgurl": "https://cdn.cdnjson.com/pic.html?url=https://tva3.sinaimg.cn/large/a15b4afegy1fmvj54szzxj21hc0u01ku"
 }
 ```
+
+#### **失败(201)**
+
+```json
+{
+    "code": 201,
+    "imgurl": "Failed to read the file."
+}
+```
+
+<!-- tabs:end -->
