@@ -40,6 +40,7 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 echo $response;
+?>
 ```
 
 <!-- tabs:end -->
