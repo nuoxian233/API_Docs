@@ -1,124 +1,78 @@
-# 接口地址
-
-请求方式：`GET`
-
-返回格式：`JSON`
+## 接口地址
 
 ```API
 https://api.nxvav.cn/api/jiexi/
 ```
 
-# 请求示例
+## 请求示例
 
 [https://api.nxvav.cn/api/jiexi/?url=https://www.douyin.com/video/6682652170002730251](https://api.nxvav.cn/api/jiexi/?url=https://www.douyin.com/video/6682652170002730251)
 
-[https://api.nxvav.cn/api/jiexi/?url=https://v.kuaishou.com/beDrMO/](https://api.nxvav.cn/api/jiexi/?url=https://v.kuaishou.com/beDrMO/)
-
-> 支持解析以下视频
-
-| 视频平台 | 视频平台 | 视频平台 |
-| ------- | ------- | ------- |
-| 抖音 | 皮皮虾 | 火山 |
-| 微视 | 微博 | 绿洲 |
-| 最右 | 轻视频 | 快手 |
-| 全民小视频 | 皮皮搞笑 | 巴塞电影 |
-| 陌陌 | Before避风 | 开眼 |
-| Vue Vlog | 小咖秀 | 全民K歌 |
-
-# 使用场景
-
 <!-- tabs:start -->
 
-#### **html**
+#### **Shell**
 
-```html
-等待编辑...
+```shell
+curl https://api.nxvav.cn/api/jiexi -X POST -d 'url=https://www.douyin.com/video/6682652170002730251'
 ```
 
-#### **php**
+#### **PHP**
 
 ```php
 <?php
-// 定义头部信息
-header('Access-Control-Allow-Origin:*');
-header('content-type:application/json');
-// API接口
-$url  = 'https://api.nxvav.cn/api/jiexi/?url=https://www.douyin.com/video/6682652170002730251';
 
-// 设置URL和相应的选项
 $curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-// 抓取URL并把它传递给data参数
-$data = curl_exec($curl);
-// 关闭cURL资源，并且释放系统资源
+
+curl_setopt_array($curl, array(
+   CURLOPT_URL => 'https://api.nxvav.cn/api/jiexi/?url=https://www.douyin.com/video/6682652170002730251',
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => '',
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
 curl_close($curl);
-
-// 状态码
-$data = json_decode(trim($data,chr(239).chr(187).chr(191)));
-
-// 输出状态码
-echo $data -> code;
-// 输出返回信息
-echo $data -> msg;
-// 输出视频数据 > 作者信息
-echo $data -> data -> author;
-// 输出视频数据 > 作者ID
-echo $data -> data -> uid;
-// 输出视频数据 > 作者头像直链
-echo $data -> data -> avatar;
-// 输出视频数据 > 视频点赞数量
-echo $data -> data -> like;
-// 输出视频数据 > 视频发布时间
-echo $data -> data -> time;
-// 输出视频数据 > 视频标题
-echo $data -> data -> title;
-// 输出视频数据 > 视频封面
-echo $data -> data -> cover;
-// 输出视频数据 > 视频直链
-echo $data -> data -> url;
-// 输出音乐数据 > 音乐作者
-echo $data -> music -> author;
-// 输出音乐数据 > 音乐封面
-echo $data -> music -> avatar;
+echo $response;
 ?>
 ```
 
 <!-- tabs:end -->
 
-# 请求参数
+## 请求参数
 
-| 参数名 | 类型 | 示例 | 说明 |
-| ------ | ---- | ---- | ---- |
-| url | 必填 | 不能带中文字、特殊符号 | 视频平台分享的链接地址 |
+| 参数名 | 类型 | 必填 | 说明 |
+| - | - | - | - |
+| url | string | 是 | 视频平台分享的链接地址 |
 
-# 返回参数
+## 返回参数
 
-| 返回参数 | 说明 |
-| -------- | ---- |
-| code | 状态码 |
-| msg | 返回信息 |
-| data | 视频数据 |
-| data > author | 作者名字 |
-| data > uid | 作者id |
-| data > avatar | 作者头像 |
-| data > like | 视频点赞数量 |
-| data > time | 发布时间(时间戳) |
-| data > title | 视频标题 |
-| data > cover | 视频封面 |
-| data > url | 视频直链地址 |
-| data > music | 音乐信息 |
-| data > music > author | 音乐作者 |
-| data > music > avatar | 音乐封面 |
+| 返回参数 | 类型 | 说明 |
+| - | - | - |
+| code | string | 状态码 |
+| msg | string | 返回信息 |
+| data | string | 视频数据 |
+| data > author | string | 作者名字 |
+| data > uid | string | 作者id |
+| data > avatar | string | 作者头像 |
+| data > like | string | 视频点赞数量 |
+| data > time | string | 发布时间(时间戳) |
+| data > title | string | 视频标题 |
+| data > cover | string | 视频封面 |
+| data > url | string | 视频直链地址 |
+| data > music | string | 音乐信息 |
+| data > music > author | string | 音乐作者 |
+| data > music > avatar | string | 音乐封面 |
 
-# 状态代码
+## 返回示例
 
-| 返回状态 | 说明 |
-| -------- | ---- |
-| 200 | 正常 |
-| 201 | 错误 |
+<!-- tabs:start -->
 
-# 返回示例
+#### **成功(200)**
 
 ```json
 {
@@ -140,3 +94,14 @@ echo $data -> music -> avatar;
     }
 }
 ```
+
+#### **失败(201)**
+
+```json
+{
+    "code": 201,
+    "msg": "解析失败",
+}
+```
+
+<!-- tabs:end -->
