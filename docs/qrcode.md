@@ -1,21 +1,21 @@
 ## 接口地址
 
 ```API
-https://api.nxvav.cn/api/qr/
+https://api.nxvav.cn/api/qrcode/
 ```
 
 ## 请求示例
 
-[https://api.nxvav.cn/api/qr/?text=https://api.nxvav.cn/&size=100](https://api.nxvav.cn/api/qr/?text=https://api.nxvav.cn/&size=100)
+[https://api.nxvav.cn/api/qrcode/?text=https://api.nxvav.cn/&size=100](https://api.nxvav.cn/api/qrcode/?text=https://api.nxvav.cn/&size=100)
 
-[https://api.nxvav.cn/api/qr/?text=你现在访问的是nuoxian的公共API服务哦！](https://api.nxvav.cn/api/qr/?text=你现在访问的是nuoxian的公共API服务哦！)
+[https://api.nxvav.cn/api/qrcode/?text=你现在访问的是nuoxian的公共API服务哦！](https://api.nxvav.cn/api/qrcode/?text=你现在访问的是nuoxian的公共API服务哦！)
 
 <!-- tabs:start -->
 
 #### **Shell**
 
 ```shell
-curl https://api.nxvav.cn/api/qr -X POST -d 'text=https://api.nxvav.cn/'
+curl https://api.nxvav.cn/api/qrcode -X POST -d 'text=https://api.nxvav.cn/'
 ```
 
 #### **HTTP**
@@ -25,7 +25,7 @@ curl https://api.nxvav.cn/api/qr -X POST -d 'text=https://api.nxvav.cn/'
 
 $curl = curl_init();
 
-$url = 'https://api.nxvav.cn/api/qr/?text=https://api.nxvav.cn/&size=100';
+$url = 'https://api.nxvav.cn/api/qrcode/?text=https://api.nxvav.cn/&size=100';
 $outputFilePath = 'qrcode.png';
 
 curl_setopt_array($curl, array(
@@ -72,7 +72,7 @@ curl_close($curl);
 
 Content-Type: image/png
 
-![QRCode](https://api.nxvav.cn/api/qr/?text=https://api.nxvav.cn/&size=100)
+![QRCode](https://api.nxvav.cn/api/qrcode/?text=https://api.nxvav.cn/&size=100)
 
 #### **失败(201)**
 

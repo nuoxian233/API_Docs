@@ -6,7 +6,7 @@
 
 * 接口文档
   * [一言](docs/yiyan.md "一言 | nuoxian's API 使用文档")
-  * [生成二维码](docs/qr.md "生成二维码 | nuoxian's API 使用文档")
+  * [生成二维码](docs/qrcode.md "生成二维码 | nuoxian's API 使用文档")
   * [m3u8视频播放器](docs/m3u8.md "m3u8视频播放器 | nuoxian's API 使用文档")
   * [必应每日美图](docs/bing.md "必应每日美图 | nuoxian's API 使用文档")
   * [随机动漫图](docs/dongman.md "随机动漫图 | nuoxian's API 使用文档")
@@ -21,6 +21,6 @@
   * [蓝奏网盘直链解析](docs/lanzou.md "蓝奏网盘直链解析 | nuoxian's API 使用文档")
   * [历史上的今天](docs/lishi.md "历史上的今天 | nuoxian's API 使用文档")
   * [网站权重查询](docs/webrank.md "网站权重查询 | nuoxian's API 使用文档")
-  * [MC正版用户UUID获取](docs/mc.md "MC正版用户UUID获取 | nuoxian's API 使用文档")
+  * [MC正版用户UUID获取](docs/mcuuid.md "MC正版用户UUID获取 | nuoxian's API 使用文档")
   * [MC正版皮肤披风获取](docs/mcskin.md "MC正版皮肤披风获取 | nuoxian's API 使用文档")
   * [IP位置查询](docs/ip.md "IP位置查询 | nuoxian's API 使用文档")

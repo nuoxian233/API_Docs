@@ -1,14 +1,10 @@
-# 接口地址
-
-请求方式：`GET`
-
-返回格式：`JSON`
+## 接口地址
 
 ```API
 https://api.nxvav.cn/api/mcskin/
 ```
 
-# 请求示例
+## 请求示例
 
 [https://api.nxvav.cn/api/mcskin/?id=nuoxian](https://api.nxvav.cn/api/mcskin/?id=nuoxian)
 
@@ -18,47 +14,68 @@ https://api.nxvav.cn/api/mcskin/
 
 [https://api.nxvav.cn/api/mcskin/?uuid=5f820c3958834392b1743125ac05e38c&type=skin_cloak](https://api.nxvav.cn/api/mcskin/?uuid=5f820c3958834392b1743125ac05e38c&type=skin_cloak)
 
-# 使用场景
-
 <!-- tabs:start -->
 
-#### **html**
+#### **Shell**
 
-```html
-等待编辑...
+```shell
+curl https://api.nxvav.cn/api/mcskin -X POST -d 'id=nuoxian'
+```
+
+#### **PHP**
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+   CURLOPT_URL => 'https://api.nxvav.cn/api/mcskin/?id=nuoxian',
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => '',
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+?>
 ```
 
 <!-- tabs:end -->
 
-# 请求参数
+## 请求参数
 
-| 参数名 | 类型 | 示例 | 说明 |
-| ------ | ---- | ---- | ---- |
-| id / uuid | 必填 | ?id=[用户名] / ?uuid=[uuid] | 正版MC用户名 / 正版MC玩家的UUID，优先级id > uuid |
-|  type | 可空 | skin_url / skin_cloak | 输出皮肤 / 披风 |
+| 参数名 | 类型 | 必填 | 说明 |
+| - | - | - | - |
+| id/uuid | string | 是 | 正版MC用户名/正版MC玩家的UUID，优先级id > uuid |
+| type | string | 否 | 输出类型，可选值`skin_url`，`skin_cloak` |
 
-# 返回参数
+## 返回参数
 
-| 返回参数 | 说明 |
-| -------- | ---- |
-| code | 状态码 |
-| name | 玩家昵称 |
-| uuid | 玩家UUID |
-| properties | 玩家纹理属性 |
-| Yggdrasil | 玩家Yggdrasil私钥签名 |
-| skin_timestamp | 调用纹理数据的时间 |
-| skin_url | 玩家自定义皮肤，没有为null |
-| skin_cloak | 玩家披风，没有或没装备为null |
-| skin_model | 玩家皮肤模型，null为男，slim为女 |
+| 返回参数 | 类型 | 说明 |
+| - | - | - |
+| code | string | 状态码 |
+| name | string | 玩家昵称 |
+| uuid | string | 玩家UUID |
+| properties | string | 玩家纹理属性 |
+| Yggdrasil | string | 玩家Yggdrasil私钥签名 |
+| skin_ | string | 皮肤数据 |
+| skin_ > skin_timestamp | string | 调用纹理数据的时间 |
+| skin_ > skin_url | string | 玩家自定义皮肤，没有为null |
+| skin_ > skin_cloak | string | 玩家披风，没有或没装备为null |
+| skin_ > skin_model | string | 玩家皮肤模型，null为男，slim为女 |
 
-# 状态代码
+## 返回示例
 
-| 返回状态 | 说明 |
-| -------- | ---- |
-| 200 | 正常 |
-| 201 | 查询错误 / 参数为空 |
+<!-- tabs:start -->
 
-# 返回示例
+#### **成功(200)**
 
 ```json
 {
@@ -75,3 +92,14 @@ https://api.nxvav.cn/api/mcskin/
     }
 }
 ```
+
+#### **失败(201)**
+
+```json
+{
+    "code": 201,
+    "msg": "查询失败"
+}
+```
+
+<!-- tabs:end -->
