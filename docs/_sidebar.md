@@ -20,7 +20,6 @@
   * [网站ico图标获取](docs/wzico.md "网站ico图标获取 | nuoxian's API 使用文档")
   * [蓝奏网盘直链解析](docs/lanzou.md "蓝奏网盘直链解析 | nuoxian's API 使用文档")
   * [历史上的今天](docs/lishi.md "历史上的今天 | nuoxian's API 使用文档")
-  * [QQ一键加群](docs/qun.md "QQ一键加群 | nuoxian's API 使用文档")
   * [网站权重查询](docs/web.md "网站权重查询 | nuoxian's API 使用文档")
   * [MC正版用户UUID获取](docs/mc.md "MC正版用户UUID获取 | nuoxian's API 使用文档")
   * [MC正版皮肤披风获取](docs/mcskin.md "MC正版皮肤披风获取 | nuoxian's API 使用文档")
