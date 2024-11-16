@@ -14,7 +14,6 @@
   * [热门视频解析](docs/jiexi.md "热门视频解析 | nuoxian's API 使用文档")
   * [哔哩哔哩视频解析](docs/bilivideo.md "哔哩哔哩视频解析 | nuoxian's API 使用文档")
   * [QQ头像获取](docs/qqimg.md "QQ头像获取 | nuoxian's API 使用文档")
-  * [网站ICP备案查询](docs/icp.md "网站ICP备案查询 | nuoxian's API 使用文档")
   * [城市天气预报获取](docs/weather.md "城市天气预报获取 | nuoxian's API 使用文档")
   * [网站标题获取](docs/title.md "网站标题获取 | nuoxian's API 使用文档")
   * [手机号归属地查询](docs/tel.md "手机号归属地查询 | nuoxian's API 使用文档")
