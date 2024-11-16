@@ -1,14 +1,10 @@
-# 接口地址
-
-请求方式：`GET`
-
-返回格式：`JSON`
+## 接口地址
 
 ```API
 https://api.nxvav.cn/api/lanzou/
 ```
 
-# 请求示例
+## 请求示例
 
 [https://api.nxvav.cn/api/lanzou/?url=https://wwi.lanzoui.com/i1nm7fp8z0d](https://api.nxvav.cn/api/lanzou/?url=https://wwi.lanzoui.com/i1nm7fp8z0d)
 
@@ -16,64 +12,82 @@ https://api.nxvav.cn/api/lanzou/
 
 [https://api.nxvav.cn/api/lanzou/?url=https://wwi.lanzoui.com/i1nm7fp8z0d&type=down](https://api.nxvav.cn/api/lanzou/?url=https://wwi.lanzoui.com/i1nm7fp8z0d&type=down)
 
-# 使用场景
-
 <!-- tabs:start -->
 
-#### **html**
+#### **Shell**
 
-```html
-等待编辑...
+```shell
+curl https://api.nxvav.cn/api/lanzou -X POST -d 'url=https://wwi.lanzoui.com/i1nm7fp8z0d'
+```
+
+#### **PHP**
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+   CURLOPT_URL => 'https://api.nxvav.cn/api/lanzou/?url=https://wwi.lanzoui.com/i1nm7fp8z0d',
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => '',
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+?>
 ```
 
 <!-- tabs:end -->
 
-# 请求参数
+## 请求参数
 
-| 参数名 | 类型 | 示例 | 说明 |
-| ----- | ---- | ---- | ---- |
-| url | 必填 | 蓝奏外链链接 | 蓝奏外链链接 |
+| 参数名 | 类型 | 必填 | 说明 |
+| - | - | - | - |
+| url | string | 是 | 蓝奏外链链接 |
+| pwd | string | 否 | 蓝奏外链密码 |
+| type | string | 否 | 下载类型，可选值`down` |
 
-| 参数名 | 类型 | 示例 | 说明 |
-| ----- | ---- | ---- | ---- |
-| pwd | 参数一(可空) | 蓝奏外链密码 | 蓝奏外链密码 |
+## 返回参数
 
-| 参数名 | 类型 | 示例 | 说明 |
-| -----  | ---- | ---- | ----- |
-| type |  参数二(可空) | 下载类型 | 下载类型 |
-| down | 可空 | 直接下载文件 |  直接下载文件 |
+| 返回参数 | 类型 | 说明 |
+| - | - | - |
+| code | string | 状态码 |
+| msg | string | 状态信息 |
+| name | string | 文件名 |
+| filesize | string | 文件大小 |
+| downUrl | string | 下载链接 |
 
-# 返回参数
+## 返回示例
 
-| 返回参数 | 说明 |
-| ------- | ---- |
-| code | 状态码 |
-| data | 数据 |
-| name | 文件名 |
-| author | 分享者 |
-| time | 分享时间 |
-| size | 文件大小 |
-| url | 文件直链 |
+<!-- tabs:start -->
 
-# 状态代码
-
-| 返回状态 | 说明 |
-| ------- | ---- |
-| 200 | 解析成功 |
-| 201 | 链接错误 |
-| 202 | 密码错误/密码为空 |
-
-# 返回示例
+#### **成功(200)**
 
 ```json
 {
     "code": 200,
-    "data": {
-        "name": "Game Activation Code v1.00.exe ",
-        "author": "诺仙上神 ",
-        "time": "2019-12-01 ",
-        "size": " 1.3 M ",
-        "url": "https://developer82.baidupan.com/090723bb/2019/12/01/b92af6b2b254ec99541a7a63b35aae7e.exe?st=gYuY6pX345veOeIVNCm7Ag&e=1631032018&b=VUABYABtUTFXIl5JVWZQIFZqCyFRMQV3VmxYOlU8U3EJGAxjVTEHZwVwACAAYVR_bBGELZwUqCmkELwpi&fi=14789784&pid=212-95-155-107&up=2"
-    }
+    "msg": "解析成功",
+    "name": "动漫初音鼠标指针.zip",
+    "filesize": "23.4 K",
+    "downUrl": "https://c1031.lanosso.com/112475552d2d5a10013a74576972a0ce/67382826/2020/08/17/b688f1a4c28a15cf7325f2aece24c92c.zip?fileName=%E5%8A%A8%E6%BC%AB%E5%88%9D%E9%9F%B3%E9%BC%A0%E6%A0%87%E6%8C%87%E9%92%88.zip"
 }
 ```
+
+#### **失败(400)**
+
+```json
+{
+    "code": 400,
+    "msg": "请输入分享密码"
+}
+```
+
+<!-- tabs:end -->

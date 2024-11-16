@@ -1,14 +1,10 @@
-# 接口地址
-
-请求方式：`GET`
-
-返回格式：`JSON` / `TEXT` / `JS`
+## 接口地址
 
 ```API
 https://api.nxvav.cn/api/lishi/
 ```
 
-# 请求示例
+## 请求示例
 
 [https://api.nxvav.cn/api/lishi/](https://api.nxvav.cn/api/lishi/)
 
@@ -16,39 +12,60 @@ https://api.nxvav.cn/api/lishi/
 
 [https://api.nxvav.cn/api/lishi/?format=js](https://api.nxvav.cn/api/lishi/?format=js)
 
-# 使用场景
-
 <!-- tabs:start -->
 
-#### **html**
+#### **Shell**
 
-```html
-等待编辑...
+```shell
+curl https://api.nxvav.cn/api/lishi -X POST -d 'format=json'
+```
+
+#### **PHP**
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+   CURLOPT_URL => 'https://api.nxvav.cn/api/lishi/?format=json',
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => '',
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+?>
 ```
 
 <!-- tabs:end -->
 
-# 请求参数
+## 请求参数
 
-| 参数名 | 类型 | 示例 | 说明 |
-| ------ | ---- | ---- | ---- |
-| format | 可空 | json / js | 获取历史上的今天 js json格式 |
+| 参数名 | 类型 | 必填 | 说明 |
+| - | - | - | - |
+| format | string | 否 | 输出格式，可选值`json`，`js` |
 
-# 返回参数
+## 返回参数
 
-| 返回参数 | 说明 |
-| -------- | ---- |
-| code | 状态码 |
-| day | 今天时间 |
-| content | 发生的事件 |
+| 返回参数 | 类型 | 说明 |
+| - | - | - |
+| code | string | 状态码 |
+| day | string | 今天时间 |
+| content | string | 发生事件 |
 
-# 状态代码
+## 返回示例
 
-| 返回状态 | 说明 |
-| -------- | ---- |
-| 200 | 正常 |
+<!-- tabs:start -->
 
-# 返回示例
+#### **成功(200)**
 
 ```json
 {
@@ -73,3 +90,14 @@ https://api.nxvav.cn/api/lishi/
     ]
 }
 ```
+
+#### **失败(201)**
+
+```json
+{
+    "code": 200,
+    "msg": "错误"
+}
+```
+
+<!-- tabs:end -->

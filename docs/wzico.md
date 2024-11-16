@@ -1,47 +1,77 @@
-# 接口地址
-
-请求方式：`GET`
-
-返回格式：`ICO`
+## 接口地址
 
 ```API
 https://api.nxvav.cn/api/wzico/
 ```
 
-# 请求示例
+## 请求示例
 
-[https://api.nxvav.cn/api/wzico/?url=nxvav.cn](https://api.nxvav.cn/api/wzico/?url=nxvav.cn)
-
-# 使用场景
+[https://api.nxvav.cn/api/wzico/?url=www.baidu.com](https://api.nxvav.cn/api/wzico/?url=www.baidu.com)
 
 <!-- tabs:start -->
 
-#### **html**
+#### **Shell**
 
-```html
-<img src="https://api.nxvav.cn/api/wzico/?url=nxvav.cn" />
+```shell
+curl https://api.nxvav.cn/api/wzico -X POST -d 'url=www.baidu.com'
+```
+
+#### **PHP**
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+   CURLOPT_URL => 'https://api.nxvav.cn/api/wzico/?url=www.baidu.com',
+   CURLOPT_RETURNTRANSFER => true,
+   CURLOPT_ENCODING => '',
+   CURLOPT_MAXREDIRS => 10,
+   CURLOPT_TIMEOUT => 0,
+   CURLOPT_FOLLOWLOCATION => true,
+   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+   CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+?>
 ```
 
 <!-- tabs:end -->
 
-# 请求参数
+## 请求参数
 
-| 参数名 | 类型 | 示例 | 说明 |
-| ----- | ---- | ---- | ---- |
-| url | 必填 | 网站链接 | 网站链接,不加http(s) |
+| 参数名 | 类型 | 必填 | 说明 |
+| - | - | - | - |
+| url | string | 是 | 网站链接，不加http(s) |
 
-# 返回参数
+## 返回参数
 
-| 返回参数 | 说明 |
-| ------- | ---- |
-| 无 | 无 |
+| 返回参数 | 类型 | 说明 |
+| - | - | - |
+| image | image/png | 返回的图片，图片格式为PNG |
 
-# 状态代码
+## 返回示例
 
-| 返回状态 | 说明 |
-| ------- | ----- |
-| 无 | 无 |
+<!-- tabs:start -->
 
-# 返回示例
+#### **成功(200)**
 
-<img src="https://api.nxvav.cn/api/wzico/?url=nxvav.cn" />
+Content-Type: image/png
+
+<img src="https://api.nxvav.cn/api/wzico/?url=www.baidu.com" />
+
+#### **失败(201)**
+
+```json
+{
+    "code": 201,
+    "msg": "未获取到网站图标"
+}
+```
+
+<!-- tabs:end -->
