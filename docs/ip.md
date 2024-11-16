@@ -61,6 +61,7 @@ echo $response;
 | 返回参数 | 类型 | 说明 |
 | - | - | - |
 | code | string | 状态码 |
+| data | string | ip数据 |
 | data > ip | string | ip地址 |
 | data > ipVersion | string | ip协议版本 |
 | data > countryName | string | 国家 |
