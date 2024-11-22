@@ -20,6 +20,7 @@
     window.$docsify = {
         name: 'nuoxian\'s API 使用文档',  // 网站首页昵称
         basePath: '/doc',
+        ga: 'UA-173995101-3',
         
         /* 代码复制 */
         copyCode: {
@@ -38,12 +39,18 @@
             '/.*/_sidebar.md': '_sidebar.md'
         },
         notFoundPage: true,
-        notFoundPage: '_404.md'
+        notFoundPage: '_404.md',
     }
   </script>
 
   <!-- 主程序 -->
   <script src="//unpkg.com/docsify@4.13.1/lib/docsify.min.js"></script>
+
+  <!-- 谷歌统计 -->
+  <script src="//unpkg.com/docsify@4.13.1/lib/plugins/ga.min.js"></script>
+
+  <!-- emoji表情 -->
+  <script src="//unpkg.com/docsify@4.13.1/lib/plugins/emoji.min.js"></script>
 
   <!-- 代码高亮 -->
   <script src="//unpkg.com/prismjs@1.29.0/components/prism-bash.min.js"></script>
