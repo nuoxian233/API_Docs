@@ -24,3 +24,4 @@
   * [MC正版用户UUID获取](docs/mcuuid.md "MC正版用户UUID获取 | nuoxian's API 使用文档")
   * [MC正版皮肤披风获取](docs/mcskin.md "MC正版皮肤披风获取 | nuoxian's API 使用文档")
   * [IP位置查询](docs/ip.md "IP位置查询 | nuoxian's API 使用文档")
+  * [今日油价查询](docs/oil.md "今日油价查询 | nuoxian's API 使用文档")
